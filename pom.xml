@@ -38,7 +38,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.shaninfotech.flightjdbcApp.App</mainClass>
+                            <mainClass>com.shanInfotech.flightjdbcApp.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -59,7 +59,7 @@
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.shaninfotech.flightjdbcApp.App</mainClass>
+                                    <mainClass>com.shanInfotech.flightjdbcApp.App</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
