@@ -1,11 +1,9 @@
 package com.shanInfotech.flightjdbcApp;
 
+
 import java.sql.SQLException;
 
 import com.shanInfotech.flightjdbcApp.Dao.FlightDetailsDao;
-import com.shanInfotech.flightjdbcApp.Dao.LiquorDao;
-import com.shanInfotech.flightjdbcApp.Dao.ToyDao;
-import com.shanInfotech.flightjdbcApp.Example.Toy;
 import com.shanInfotech.flightjdbcApp.entity.FlightDetails;
 
 
