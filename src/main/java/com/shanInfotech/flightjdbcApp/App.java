@@ -13,7 +13,7 @@ public class App {
     public static void main(String[] args) throws Exception, SQLException{
         
         FlightDetailsDao fd=new FlightDetailsDao();
-       // fd.addFlight(new FlightDetails());
+       fd.addFlight(new FlightDetails());
   fd.getFlight();
 //        ToyDao td=new ToyDao();
 //        td.addToy(new Toy());
