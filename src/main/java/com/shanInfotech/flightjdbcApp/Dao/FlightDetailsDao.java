@@ -18,6 +18,7 @@ public class FlightDetailsDao implements IFlightDetails{
 	@Override
 	public void addFlight(FlightDetails fd) throws SQLException, ClassNotFoundException {
 		con=DBConnect.Connect();
+		con.setAutoCommit(false);
 		st=con.createStatement();
 		System.out.println("Flight Details : Id, FlightCompany,TravelDate,Source,Destination");
 		fd.setFlightId(sc.nextInt());
@@ -29,8 +30,9 @@ public class FlightDetailsDao implements IFlightDetails{
 		String insertFlights="insert into flightdetails values("+fd.getFlightId()+",' "+fd.getFlightCompany()+"','"
 				+fd.getTravelDate()+"','"+fd.getSource()+"','"+fd.getDestination()+"')";
 		st.executeUpdate(insertFlights);
+		con.commit();
 		System.out.println("data inserted");
-		
+		con.close();
 	}
 
 	@Override
@@ -41,7 +43,8 @@ public class FlightDetailsDao implements IFlightDetails{
 
 	@Override
 	public void getFlight() throws Exception {
-		// TODO Auto-generated method stub
+		con=DBConnect.Connect();
+		st=con.createStatement();
 		String queryResult="select * from flightdetails";
 		rs=st.executeQuery(queryResult);
 		while(rs.next()) {
