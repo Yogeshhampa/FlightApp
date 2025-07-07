@@ -3,11 +3,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.shanInfotech.flightjdbcApp</groupId>
-  <artifactId>flightjdbcApp</artifactId>
+  <groupId>com.shanInfo.GadiServiceApp</groupId>
+  <artifactId>GadiServiceApp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>flightjdbcApp</name>
+  <name>GadiServiceApp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -28,7 +28,27 @@
     </dependencies>
   </dependencyManagement>
 
-<build>
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Optionally: parameterized tests support -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.33</version>
+</dependency>
+
+  </dependencies>
+
+  <build>
         <plugins>
             <!-- JAR Plugin to specify the main class -->
             <plugin>
@@ -38,7 +58,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.shanInfotech.flightjdbcApp.App</mainClass>
+                            <mainClass>com.shanInfo.GadiServiceApp.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -59,7 +79,7 @@
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.shanInfotech.flightjdbcApp.App</mainClass>
+                                    <mainClass>com.shanInfo.GadiServiceApp.App</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
